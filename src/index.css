@@ -33,4 +33,10 @@ body {
 .card {
     width: 20%;
     background-color: #4b4b4b;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.card img {
+    width: 100%;
 }
