@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 function MovieDetail() {
     const { id } = useParams();
@@ -8,6 +8,7 @@ function MovieDetail() {
             <h2>Dettaglio film</h2>
             <p>id film : {`${id}`}</p>
             <p>Descrizione film</p>
+            <Link to="/movies/">Torna alla lista dei film</Link>
         </>
     )
 }
