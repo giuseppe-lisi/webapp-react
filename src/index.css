@@ -5,7 +5,29 @@
     font-family: sans-serif;
 }
 
+.wrapper {
+    padding-inline: 3rem;
+}
+
+header {
+    background-color: #4b4b4b;
+    padding-block: 1rem;
+}
+
 body {
     background-color: #222;
     color: whitesmoke;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-block: 2rem;
+    justify-content: space-between;
+}
+
+.card {
+    width: 20%;
+    background-color: #4b4b4b;
 }
