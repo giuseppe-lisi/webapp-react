@@ -1,7 +1,11 @@
+import Header from "./pages/Header";
+import Movies from "./pages/Movies";
+
 function App() {
     return (
         <>
-            <h1>Benvenuto!</h1>
+            <Header />
+            <Movies />
         </>
     );
 }
