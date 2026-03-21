@@ -1,22 +1,13 @@
+import Card from "../components/Card";
+
 function Movies() {
     return (
         <>
             <div className="card-container wrapper">
-                <div className="card">
-                    card
-                </div>
-                <div className="card">
-                    card
-                </div>
-                <div className="card">
-                    card
-                </div>
-                <div className="card">
-                    card
-                </div>
-                <div className="card">
-                    card
-                </div>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
             </div>
         </>
     )
