@@ -1,5 +1,9 @@
+import { Link } from "react-router-dom";
+
+import MovieDetail from "../pages/MovieDetail";
+
 function Card({ movie }) {    
-    const {title, img, year, desc} = movie;
+    const { id, title, img, year, desc} = movie;
 
     return (
         <div className="card">
@@ -9,6 +13,7 @@ function Card({ movie }) {
             <h3>{title}</h3>
             <p>{year}</p>
             <p>{desc}</p>
+            <Link to={`/movies/${id}`}>Vai al dettaglio</Link>
         </div>
     );
 }
