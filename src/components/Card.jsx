@@ -1,16 +1,14 @@
-function Card() {
+function Card({ movie }) {    
+    const {title, img, year, desc} = movie;
+
     return (
         <div className="card">
             <div>
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg"
-                    alt="immagine film"
-                />
+                <img src={img}/>
             </div>
-            <div>Titolo Film</div>
-            <div>
-                <p>Descrizione film</p>
-            </div>
+            <h3>{title}</h3>
+            <p>{year}</p>
+            <p>{desc}</p>
         </div>
     );
 }
