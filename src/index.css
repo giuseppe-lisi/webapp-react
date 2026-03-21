@@ -9,9 +9,22 @@
     padding-inline: 3rem;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(66, 255, 255);
+}
+
 header {
     background-color: #4b4b4b;
     padding-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    gap: 10px;
 }
 
 main {
@@ -28,6 +41,7 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-between;
+    padding-block: 2rem;
 }
 
 .card {
@@ -39,4 +53,8 @@ body {
 
 .card img {
     width: 100%;
+}
+
+.dettaglio {
+    padding-bottom: 3rem;
 }
