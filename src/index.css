@@ -14,6 +14,10 @@ header {
     padding-block: 1rem;
 }
 
+main {
+    padding-block: 2rem;
+}
+
 body {
     background-color: #222;
     color: whitesmoke;
@@ -23,7 +27,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    padding-block: 2rem;
     justify-content: space-between;
 }
 
