@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import MovieDetail from "../pages/MovieDetail";
 
 function Card({ movie }) {    
