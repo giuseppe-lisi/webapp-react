@@ -4,7 +4,6 @@ function CardReview({ review }) {
     return (
         <>
             <div className="card">
-                <p>sono una review</p>
                 <h3>{name}</h3>
                 <p>{vote}</p>
                 <p>{text}</p>
