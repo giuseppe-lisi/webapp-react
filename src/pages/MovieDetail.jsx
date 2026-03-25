@@ -1,9 +1,7 @@
 import { useParams, Link } from "react-router-dom";
-import reviews from "../data/reviews";
 import CardReview from "../components/CardReview";
 
 function MovieDetail() {
-    const { id } = useParams();
     return (
         <>
             <div className="dettaglio">
