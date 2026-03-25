@@ -57,4 +57,9 @@ body {
 
 .dettaglio {
     padding-bottom: 3rem;
+    width: 30%;
+}
+
+.dettaglio .img {
+    width: 100%;
 }
