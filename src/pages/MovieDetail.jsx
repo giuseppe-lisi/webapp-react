@@ -20,16 +20,17 @@ function MovieDetail() {
     return (
         <>
             <div className="dettaglio">
-                <img src={movie.image} />
+                <img src={`http://localhost:3000/static/movies/${movie.image}`}/>
                 <h3>{movie.title}</h3>
                 <h2>{movie.release_year}</h2>
                 <p>{movie.genre}</p>
                 <p>{movie.abstract}</p>
                 <Link to="/movies/">Torna alla lista dei film</Link>
             </div>
+            <h3>Recensioni</h3>
             <div className="card-container">
                 {movie.reviews?.map((review) => (
-                    <CardReview review={review} key={review.id}/>
+                    <CardReview review={review} key={review.id} />
                 ))}
             </div>
         </>

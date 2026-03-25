@@ -7,7 +7,7 @@ function Card({ movie }) {
     return (
         <div className="card">
             <div>
-                <img src={image}/>
+                <img src={`http://localhost:3000/static/movies/${image}`}/>
             </div>
             <h3>{title}</h3>
             <p>{release_year}</p>
