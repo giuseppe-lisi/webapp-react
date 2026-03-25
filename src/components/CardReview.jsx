@@ -1,11 +1,13 @@
-function CardReview({ reviewData }) {
-    const { name, stars, review } = reviewData;
+function CardReview({ review }) {
+
+    const {name, vote, text} = review
     return (
         <>
             <div className="card">
+                <p>sono una review</p>
                 <h3>{name}</h3>
-                <div>Stars: {stars}</div>
-                <p>{review}</p>
+                <p>{vote}</p>
+                <p>{text}</p>
             </div>
         </>
     );
