@@ -2,7 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 
 function ReviewForm({ movieId, reloadBooks }) {
+    
     const [formData, setFormData] = useState({ name: "", text: "", vote: "" });
+    const initialValues = { name: "", text: "", vote: "" };
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -13,6 +15,7 @@ function ReviewForm({ movieId, reloadBooks }) {
             .post(apiUrl, formData)
             .then((results) => {
                 reloadBooks();
+                setFormData(initialValues);
             })
             .catch((err) => console.log(err));
     }
@@ -38,6 +41,7 @@ function ReviewForm({ movieId, reloadBooks }) {
                         name="name"
                         placeholder="Autore recensione"
                         onChange={setFieldValue}
+                        value={formData.name}
                     />
                 </div>
                 <div>
@@ -49,11 +53,16 @@ function ReviewForm({ movieId, reloadBooks }) {
                         max={5}
                         min={1}
                         onChange={setFieldValue}
+                        value={formData.vote}
                     />
                 </div>
                 <div>
                     <h4>Recensione</h4>
-                    <textarea name="text" onChange={setFieldValue}></textarea>
+                    <textarea
+                        name="text"
+                        onChange={setFieldValue}
+                        value={formData.text}
+                    ></textarea>
                 </div>
                 <div>
                     <button type="submit">Submit</button>
