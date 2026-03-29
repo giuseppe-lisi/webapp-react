@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CardReview from "../components/CardReview";
+import ReviewForm from "../components/ReviewForm";
 
 function MovieDetail() {
     const { id } = useParams();
@@ -36,6 +37,7 @@ function MovieDetail() {
                     <CardReview review={review} key={review.id} />
                 ))}
             </div>
+            <ReviewForm movieId={movie.id}/>
         </>
     );
 }
