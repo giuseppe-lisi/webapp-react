@@ -1,10 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 
-function ReviewForm({ movieId }) {
-
+function ReviewForm({ movieId, reloadBooks }) {
     const [formData, setFormData] = useState({ name: "", text: "", vote: "" });
-    
+
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -12,7 +11,9 @@ function ReviewForm({ movieId }) {
 
         axios
             .post(apiUrl, formData)
-            .then((results) => console.log("chiamata ok", results))
+            .then((results) => {
+                reloadBooks();
+            })
             .catch((err) => console.log(err));
     }
 

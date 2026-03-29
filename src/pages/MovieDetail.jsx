@@ -9,13 +9,17 @@ function MovieDetail() {
 
     const [movie, setMovie] = useState({});
 
-    useEffect(() => {
+    function loadBookReviews() {
         axios
-            .get(`http://localhost:3000/api/movies/${id}`)
-            .then((res) => {
-                setMovie(res.data);
-            })
-            .catch((err) => console.log("Qualcosa non va: ", err.message));
+        .get(`http://localhost:3000/api/movies/${id}`)
+        .then((res) => {
+            setMovie(res.data);
+        })
+        .catch((err) => console.log("Qualcosa non va: ", err.message));
+    }
+
+    useEffect(() => {
+        loadBookReviews()
     }, []);
 
     return (
@@ -37,7 +41,7 @@ function MovieDetail() {
                     <CardReview review={review} key={review.id} />
                 ))}
             </div>
-            <ReviewForm movieId={movie.id}/>
+            <ReviewForm movieId={movie.id} reloadBooks={loadBookReviews}/>
         </>
     );
 }
