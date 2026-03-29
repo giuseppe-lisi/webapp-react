@@ -7,8 +7,7 @@ function ReviewForm({ movieId }) {
     
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(formData);
-        
+
         const apiUrl = `http://localhost:3000/api/movies/${movieId}/reviews`;
 
         axios
